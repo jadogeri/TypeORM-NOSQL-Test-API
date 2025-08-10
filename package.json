@@ -1,0 +1,44 @@
+{
+  "name": "typeorm-sql-test-api",
+  "version": "1.0.0",
+  "description": "demo setup test fot typeorm in typescript",
+  "main": "nodemon index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/typeorm-sql-test-api.git"
+  },
+  "keywords": [
+    "Joseph",
+    "Adogeri",
+    "JosephAdogeriDev",
+    "josephadogeridev",
+    "api",
+    "typeorm",
+    "REST",
+    "CRUD"
+  ],
+  "author": "Joseph Adogeri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jadogeri/typeorm-sql-test-api/issues"
+  },
+  "homepage": "https://github.com/jadogeri/typeorm-sql-test-api#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.18.0",
+    "nodemon": "^3.1.10",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.25"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
