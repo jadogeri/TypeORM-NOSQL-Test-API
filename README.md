@@ -53,7 +53,7 @@ This is a test API utilizing TypeORM (MongoDB database) which performs CRUD oper
 
 ### **1.1 Purpose**
 
-This document components and design considerations for Employee API. The goal is to provide a template for backend developers to handle CRUD operations and basic setup for TypeORM (NOSQL database - MongoD) in typescript.
+This document components and design considerations for Employee API. The goal is to provide a template for backend developers to handle CRUD operations and basic setup for TypeORM (NOSQL database - MongoDB) in typescript.
 
 ### **1.2 Scope**
 
@@ -71,7 +71,7 @@ The system will allow users to:
 
 ## **2. API Reference**
 
-* [Link to Documentation ](https://documenter.getpostman.com/view/40822092/2sB3BEmphV)
+* [Link to Documentation ](https://documenter.getpostman.com/view/40822092/2sB3BEmprC)
 
 
 ## **3. Technology Stack**
