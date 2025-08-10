@@ -16,7 +16,7 @@ This is a test API utilizing TypeORM (MongoDB database) which performs CRUD oper
 
 ## Repository
 
- [https://github.com/jadogeri/TypeORM-SQL-Test-API.git](https://github.com/jadogeri/TypeORM-SQL-Test-API.git)
+ [https://github.com/jadogeri/TypeORM-NOSQL-Test-API.git](https://github.com/jadogeri/TypeORM-NOSQL-Test-API.git)
 
 ## Screenshots
 
@@ -53,7 +53,7 @@ This is a test API utilizing TypeORM (MongoDB database) which performs CRUD oper
 
 ### **1.1 Purpose**
 
-This document  components and design considerations for Employee API. The goal is to provide a template for backend developers to handle CRUD operations and basic setup for TypeORM (SQL database - SQLite) in typescript.
+This document components and design considerations for Employee API. The goal is to provide a template for backend developers to handle CRUD operations and basic setup for TypeORM (NOSQL database - MongoD) in typescript.
 
 ### **1.2 Scope**
 
@@ -79,7 +79,7 @@ The system will allow users to:
 - **Programming Languages**: Typescript
 - **IDE**: Visual Studio Code (VSCode)
 - **Backend Frameworks**: Node and Express
-- **Database**: SQLite
+- **Database**: MongoDB
 - **Plugins**: Early AI
 - **Source Control**: Git and GitHub
 - **Code Analsis**: SonarQube
@@ -91,16 +91,16 @@ The system will allow users to:
 
 1 Open command prompt or terminal.
 
-2 Type command git clone https://github.com/jadogeri/TypeORM-SQL-Test-API.git then press enter.
+2 Type command git clone https://github.com/jadogeri/TypeORM-NOSQL-Test-API.git then press enter.
 
 ```bash
-  git clone https://github.com/jadogeri/TypeORM-SQL-Test-API.git
+  git clone https://github.com/jadogeri/TypeORM-NOSQL-Test-API.git
 ```
 
-3 Enter command cd TypeORM-SQL-Test-API then press enter.
+3 Enter command cd TypeORM-NOSQL-Test-API then press enter.
 
 ```bash
-  cd TypeORM-SQL-Test-API
+  cd TypeORM-NOSQL-Test-API
 ```
 
 #### **4.1.1 Run Locally**
