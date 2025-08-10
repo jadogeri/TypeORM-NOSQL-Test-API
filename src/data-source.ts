@@ -7,5 +7,6 @@ export const AppDataSource = new DataSource({
     port:27017,
     host:"localhost",
     database: "testdb", // Name of your SQLite database file
-    entities:{Employee}
+    entities:{Employee},
+    synchronize: true
 });
