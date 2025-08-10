@@ -28,8 +28,18 @@ AppDataSource.initialize()
         // READ (One)
         app.get("/employees/:id", async (req, res) => {
             const stringID = req.params.id;
+            console.log("stringid", stringID)
             const objectID = new ObjectId(stringID)
-            const employee = await employeeRepository.findOneBy({ id: objectID});
+            console.log("objectid", objectID)
+            const employees = await employeeRepository.find();
+            let employee : Employee | null = null;
+            for(let index : number = 0; index < employees.length; index++){
+                console.log("employee in array id ==", employees[index].id)
+                if(objectID.toString() == employees[index].id.toString()){
+                    employee = employees[index];
+                    break;
+                }
+            }
             if (employee) {
                 res.json(employee);
             } else {
@@ -39,7 +49,19 @@ AppDataSource.initialize()
 
         // UPDATE
         app.put("/employees/:id", async (req, res) => {
-            const employee = await employeeRepository.findOneBy({ id: parseInt(req.params.id) });
+            const stringID = req.params.id;
+            console.log("stringid", stringID)
+            const objectID = new ObjectId(stringID)
+            console.log("objectid", objectID)
+            const employees = await employeeRepository.find();
+            let employee : Employee | null = null;
+            for(let index : number = 0; index < employees.length; index++){
+                console.log("employee in array id ==", employees[index].id)
+                if(objectID.toString() == employees[index].id.toString()){
+                    employee = employees[index];
+                    break;
+                }
+            }
             if (employee) {
                 employeeRepository.merge(employee, req.body);
                 await employeeRepository.save(employee);
@@ -51,7 +73,9 @@ AppDataSource.initialize()
 
         // DELETE (One)
         app.delete("/employees/:id", async (req, res) => {
-            const result = await employeeRepository.delete(parseInt(req.params.id));
+            const stringID = req.params.id;
+            const objectID = new ObjectId(stringID);
+            const result = await employeeRepository.delete(objectID);
             if (result.affected as number > 0
 
             ) {
@@ -78,4 +102,5 @@ AppDataSource.initialize()
         });
     })
     .catch((error) => console.log(error));
+
     
