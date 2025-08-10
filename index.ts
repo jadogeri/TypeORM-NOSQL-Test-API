@@ -3,7 +3,6 @@ import { AppDataSource } from "./src/data-source";
 import { Employee } from "./src/entities/Employee";
 import express, { Response, Request } from "express";
 import { ObjectId } from 'mongodb'
-//const query  = {"_id":ObjectId(req.params.productId)}
 
 AppDataSource.initialize()
     .then(async () => {
@@ -87,8 +86,8 @@ AppDataSource.initialize()
 
         // DELETE (All)
         app.delete("/employees", async (req, res) => {
-            const result = await employeeRepository.deleteAll();
-            if (result.affected as number > 0
+            const result = await employeeRepository.deleteMany({});
+            if (result.deletedCount as number > 0
 
             ) {
                 res.status(204).send(); // No Content
