@@ -2,6 +2,8 @@
 import { AppDataSource } from "./src/data-source";
 import { Employee } from "./src/entities/Employee";
 import express, { Response, Request } from "express";
+import { ObjectId } from 'mongodb'
+//const query  = {"_id":ObjectId(req.params.productId)}
 
 AppDataSource.initialize()
     .then(async () => {
@@ -25,7 +27,9 @@ AppDataSource.initialize()
 
         // READ (One)
         app.get("/employees/:id", async (req, res) => {
-            const employee = await employeeRepository.findOneBy({ id: parseInt(req.params.id) });
+            const stringID = req.params.id;
+            const objectID = new ObjectId(stringID)
+            const employee = await employeeRepository.findOneBy({ id: objectID});
             if (employee) {
                 res.json(employee);
             } else {
